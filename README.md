@@ -3,7 +3,7 @@
 ## 📌 Overview
 
 The **FastAPI backend** is an essential part of the **Digital Time Capsule** project, responsible for **AI-powered sentiment analysis** of messages stored in capsules. This microservice provides **fast, efficient, and scalable** NLP-based analysis, enhancing user interaction with AI-generated insights.
-
+ **Link To Other 2 Repos:**[Time Capsule](https://github.com/anishk85/time-capsule-fastapi.git),(https://github.com/HarryOhm33/TimeCapsule.git)
 ---
 
 ## **🛠 Technologies Used**
