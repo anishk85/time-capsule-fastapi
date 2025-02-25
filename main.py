@@ -1,3 +1,4 @@
+import asyncio
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from transformers import pipeline
@@ -50,6 +51,16 @@ async def analyze_sentiment(request: SentimentRequest):
 @app.get("/")
 async def root():
     return {"message": "✅ Sentiment Analysis API is running!"}
+
+# ✅ Background task to print "Script running..." every minute
+async def print_status():
+    while True:
+        print("Script running...")
+        await asyncio.sleep(60)
+
+@app.on_event("startup")
+async def startup_event():
+    asyncio.create_task(print_status())
 
 # ✅ Ensure proper Uvicorn execution on Render
 if __name__ == "__main__":
